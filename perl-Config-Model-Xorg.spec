@@ -1,15 +1,13 @@
 %define upstream_name    Config-Model-Xorg
-%define upstream_version 1.116
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    1
+Version:    1.116
+Release:    2
 
 Summary:    Xorg configuration model for Config::Model 
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://github.com/dod38fr/config-model/wiki
-Source0:    https://cpan.metacpan.org/authors/id/D/DD/DDUMONT/Config-Model-Xorg-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/D/DD/DDUMONT/Config-Model-Xorg-%{version}.tar.gz
 
 BuildRequires: perl(Config::Model::CursesUI)
 BuildRequires: perl(Config::Model)
@@ -26,7 +24,7 @@ With this module and Config::Model, you have a tool to tune the configuration of
 Installing Config::Model::CursesUI is recommended as you'll have a more user friendly curses based user interface.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version} 
+%setup -q -n %{upstream_name}-%{version} 
 
 %build
 %{__perl} Build.PL installdirs=vendor
